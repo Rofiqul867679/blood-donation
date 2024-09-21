@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Blood Donation</h1>
+        <nav>
+            <a href="#search">রক্তের গ্রুপ অনুসন্ধান</a>
+            <a href="#register">রক্তদাতা নিবন্ধন</a>
+            <a href="#blog">আমার ব্লগ</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="search">
+            <h2>রক্তের গ্রুপ অনুসন্ধান</h2>
+            <input type="text" id="bloodGroupSearch" placeholder="রক্তের গ্রুপ লিখুন">
+            <button onclick="searchBloodGroup()">অনুসন্ধান করুন</button>
+            <div id="searchResults"></div>
+        </section>
+
+        <section id="register">
+            <h2>রক্তদাতা নিবন্ধন ফরম</h2>
+            <form id="donorForm">
+                <label>প্রোফাইল ছবি:</label>
+                <input type="file" accept="image/*" id="profilePhoto"><br>
+                <label>কভার ছবি:</label>
+                <input type="file" accept="image/*" id="coverPhoto"><br>
+                <label>রক্তের গ্রুপ:</label>
+                <input type="text" required id="bloodGroup"><br>
+                <label>ফোন নম্বর:</label>
+                <input type="text" id="phone"><br>
+                <label>ইমেইল:</label>
+                <input type="email" id="email"><br>
+                <label>হোয়াটসঅ্যাপ নম্বর:</label>
+                <input type="text" id="whatsapp"><br>
+                <label>ফেসবুক প্রোফাইল লিংক:</label>
+                <input type="text" id="facebook"><br>
+                <button type="submit">নিবন্ধন করুন</button>
+            </form>
+            <div id="notification"></div>
+        </section>
+
+        <section id="blog">
+            <h2>আমার ব্লগ</h2>
+            <p>এখানে আপনার ব্যক্তিগত ব্লগ পোস্ট থাকবে।</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
