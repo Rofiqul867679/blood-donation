@@ -3,55 +3,330 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blood Donation</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>SCF</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        .form-container {
+            max-width: 500px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .scroll-box {
+            width:240px;
+            height:200px;
+            overflow-y: scroll;
+            padding:10px;
+            border:2px solid ;
+            border-radius:8px;
+        }
+        .form-container h2 {
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group textarea {
+            width: 92%;
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+        }
+        .form-group button {
+            width: 98%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .form-group button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Blood Donation</h1>
-        <nav>
-            <a href="#search">রক্তের গ্রুপ অনুসন্ধান</a>
-            <a href="#register">রক্তদাতা নিবন্ধন</a>
-            <a href="#blog">আমার ব্লগ</a>
-        </nav>
-    </header>
+    <div style="text-align: center;">
+        <a href="https://ibb.co/mvJPqZL">
+            <img style="height:60px;width:60px; background-  #45a049" src="https://i.ibb.co/yh0xyvw/IMG-20241014-081715.jpg" alt="IMG-20241014-081715" border="0">
+        </a>
+    </div>
+    <h2 style="text-align:center">Mymensingh Government Polytechnic Institute</h2>
 
-    <main>
-        <section id="search">
-            <h2>রক্তের গ্রুপ অনুসন্ধান</h2>
-            <input type="text" id="bloodGroupSearch" placeholder="রক্তের গ্রুপ লিখুন">
-            <button onclick="searchBloodGroup()">অনুসন্ধান করুন</button>
-            <div id="searchResults"></div>
-        </section>
-
-        <section id="register">
-            <h2>রক্তদাতা নিবন্ধন ফরম</h2>
-            <form id="donorForm">
-                <label>প্রোফাইল ছবি:</label>
-                <input type="file" accept="image/*" id="profilePhoto"><br>
-                <label>কভার ছবি:</label>
-                <input type="file" accept="image/*" id="coverPhoto"><br>
-                <label>রক্তের গ্রুপ:</label>
-                <input type="text" required id="bloodGroup"><br>
-                <label>ফোন নম্বর:</label>
-                <input type="text" id="phone"><br>
-                <label>ইমেইল:</label>
-                <input type="email" id="email"><br>
-                <label>হোয়াটসঅ্যাপ নম্বর:</label>
-                <input type="text" id="whatsapp"><br>
-                <label>ফেসবুক প্রোফাইল লিংক:</label>
-                <input type="text" id="facebook"><br>
-                <button type="submit">নিবন্ধন করুন</button>
-            </form>
-            <div id="notification"></div>
-        </section>
-
-        <section id="blog">
-            <h2>আমার ব্লগ</h2>
-            <p>এখানে আপনার ব্যক্তিগত ব্লগ পোস্ট থাকবে।</p>
-        </section>
-    </main>
-
-    <script src="script.js"></script>
+    <div class="form-container">
+        <h2 style="color:#4CAF50"><b>Students Contact Form</b></h2>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="name">First name:</label>
+                <input placeholder="Enter your First name" type="text" id="first-name" name="first-name" required="⚠ First name error">
+            </div>
+            <div class="form-group">
+                <label for="name">Last name:</label>
+                <input placeholder="Enter your Last name" type="text" id="last-name" name="last-name" required>
+            </div>
+            <div>
+                <fieldset style="border-radius:8px; display:block;margin:0 auto;width:239px">
+                    <legend>Gender</legend>
+                    <input name="gen"type="radio">Male
+                    <input name="gen" type="radio">Female
+                    <input name="gen"type="radio">Others
+                </fildset>
+            </div><br>
+            <div class="form-group">
+                <fieldset style="border-radius:8px;displaynblock;margin:0 auto;width:239px">
+                    <label for="roll">Roll no:</label>
+                    <input placeholder="Enter your Roll no:" type="number" id="roll" name="roll" required>
+                    
+                    <div class="form-group"><br>
+                        <label for="reg">Registration no:</label>
+                        <input placeholder="Enter your Registration no:" type="number" id="reg" name="reg" required>
+                        <div class="form-group"><br>
+                            <label for="department">Department:</label>
+                            <select style="height:37px; border-radius:8px; width:240px">
+                                <option>Select your Department</option>
+                                <option>Computer Science & Technology</option>
+                                <option>Electrical Technology</option>
+                                <option>Civil Technology</option>
+                                <option>Electronics Technology</option>
+                                <option>Mechanical Technology</option>
+                                <option>Electro Medical Technology</option>
+                            </select><br>
+                            <div><br>
+                                <label>Shift:</label>
+                                    <select style="display:block;margin:0 auto;height:37px;width:240px;border-radius:8px">
+                                        <option>Select your Shift</option>
+                                        <option>Morning</option>
+                                        <option>Day</option>
+                                    </select>
+                            </div><br>
+                            <div class="form-group">
+                <label for="semester">Semester:</label>
+                <select style="border-radius:8px;width:240px;height:37px;display:block;margin:0 auto">
+                    <option>Select your semester</option>
+                    <option>1st</option>
+                    <option>2nd</option>
+                    <option>3rd</option>
+                    <option>4th</option>
+                    <option>5th</option>
+                    <option>6th</option>
+                    <option>7th</option>
+                    <option>8th</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="group">Group:</label>
+                <select style="width:240px;height:37px ; border-radius:8px"required>
+                    <option>Select your Group</option>
+                    <option>A</option>
+                    <option>B</option>
+                    <option>C</option>
+                </select>               
+            </div>
+                </fieldset>
+            </div>
+            <div class="form-group">
+                <label for="blood-group">Blood group:</label>
+                <select style="width:266px;height:37px;border-radius:8px" required>
+                    <option>Select your Blood group</option>
+                    <option>A+</option>
+                    <option>A-</option>
+                    <option>B+</option>
+                    <option>B-</option>
+                    <option>O+</option>
+                    <option>O-</option>
+                    <option>AB+</option>
+                    <option>AB-</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone number:</label>
+                <input placeholder="Enter your Phone number" type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <fieldset style="display:block; margin:0 auto; border-radius: 8px">
+                    <legend>Address:</legend>
+                    <label for="district">District:</label>
+                    <input list="districts" placeholder="Select your District" type="text" id="district" name="district" required>
+                    <datalist id="districts">
+                        <option value="Dhaka"></option>
+                        <option value="Chattogram"></option>
+                        <option value="Rajshahi"></option>
+                        <option value="Khulna"></option>
+                        <option value="Barishal"></option>
+                        <option value="Sylhet"></option>
+                        <option value="Rangpur"></option>
+                        <option value="Mymensingh"></option>
+                        <option value="Gazipur"></option>
+                        <option value="Narayanganj"></option>
+                        <option value="Comilla"></option>
+                        <option value="Noakhali"></option>
+                        <option value="Feni"></option>
+                        <option value="Cox's Bazar"></option>
+                        <option value="Khagrachari"></option>
+                        <option value="Bandarban"></option>
+                        <option value="Rangamati"></option>
+                        <option value="Brahmanbaria"></option>
+                        <option value="Lakshmipur"></option>
+                        <option value="Chandpur"></option>
+                        <option value="Jamalpur"></option>
+                        <option value="Sherpur"></option>
+                        <option value="Netrokona"></option>
+                        <option value="Tangail"></option>
+                        <option value="Kishoreganj"></option>
+                        <option value="Manikganj"></option>
+                        <option value="Munshiganj"></option>
+                        <option value="Faridpur"></option>
+                        <option value="Madaripur"></option>
+                        <option value="Shariatpur"></option>
+                        <option value="Gopalganj"></option>
+                        <option value="Jessore"></option>
+                        <option value="Jhenaidah"></option>
+                        <option value="Magura"></option>
+                        <option value="Narail"></option>
+                        <option value="Satkhira"></option>
+                        <option value="Bagerhat"></option>
+                        <option value="Pirojpur"></option>
+                        <option value="Jhalokathi"></option>
+                        <option value="Barguna"></option>
+                        <option value="Patuakhali"></option>
+                        <option value="Bhola"></option>
+                        <option value="Habiganj"></option>
+                        <option value="Moulvibazar"></option>
+                        <option value="Sunamganj"></option>
+                        <option value="Dinajpur"></option>
+                        <option value="Thakurgaon"></option>
+                        <option value="Panchagarh"></option>
+                        <option value="Kurigram"></option>
+                        <option value="Lalmonirhat"></option>
+                        <option value="Gaibandha"></option>
+                        <option value="Nilphamari"></option>
+                        <option value="Bogura"></option>
+                        <option value="Natore"></option>
+                        <option value="Naogaon"></option>
+                        <option value="Pabna"></option>
+                        <option value="Joypurhat"></option>
+                        <option value="Sirajganj"></option>
+                        <option value="Chuadanga"></option>
+                        <option value="Meherpur"></option>
+                        <option value="Kushtia"></option>
+                    </datalist>
+                   
+                    <label for="upazila"><br>Upazila:</label>
+                    <input list="upazilas" placeholder="Select your Upazila" type="text" id="upazila" name="upazila" required>
+                    <datalist id="upazilas">
+                        <option value="Trishal"></option>
+                        <option value="Agartala"></option>
+                        <option value="Bandarban"></option>
+                        <option value="Barishal Sadar"></option>
+                        <option value="Brahmanbaria Sadar"></option>
+                        <option value="Brahmanbaria Sadar Upazila"></option>
+                        <option value="Cox's Bazar Sadar"></option>
+                        <option value="Dinajpur Sadar"></option>
+                        <option value="Faridpur Sadar"></option>
+                        <option value="Gabtoli"></option>
+                        <option value="Gafargaon"></option>
+                        <option value="Gazipur Sadar"></option>
+                        <option value="Habiganj Sadar"></option>
+                        <option value="Haluaghat"></option>
+                        <option value="Hazaribagh"></option>
+                        <option value="Ishwardi"></option>
+                        <option value="Jamalpur Sadar"></option>
+                        <option value="Jashore Sadar"></option>
+                        <option value="Jhenaidah Sadar"></option>
+                        <option value="Joypurhat Sadar"></option>
+                        <option value="Khulna Sadar"></option>
+                        <option value="Kishoreganj Sadar"></option>
+                        <option value="Krishnanagar"></option>
+                        <option value="Lalmonirhat Sadar"></option>
+                        <option value="Magura Sadar"></option>
+                        <option value="Manikganj Sadar"></option>
+                        <option value="Meherpur Sadar"></option>
+                        <option value="Moulvibazar Sadar"></option>
+                        <option value="Munshiganj Sadar"></option>
+                        <option value="Naogaon Sadar"></option>
+                        <option value="Narail Sadar"></option>
+                        <option value="Narsingdi Sadar"></option>
+                        <option value="Netrakona Sadar"></option>
+                        <option value="Nawabganj"></option>
+                        <option value="Netrakona"></option>
+                        <option value="Pabna Sadar"></option>
+                        <option value="Panchagarh Sadar"></option>
+                        <option value="Patuakhali Sadar"></option>
+                        <option value="Pirojpur Sadar"></option>
+                        <option value="Rajbari"></option>
+                        <option value="Rajshahi Sadar"></option>
+                        <option value="Rangpur Sadar"></option>
+                        <option value="Rangpur"></option>
+                        <option value="Sakhipur"></option>
+                        <option value="Satkhira Sadar"></option>
+                        <option value="Shajahanpur"></option>
+                        <option value="Shariatpur Sadar"></option>
+                        <option value="Sherpur Sadar"></option>
+                        <option value="Sunamganj Sadar"></option>
+                    </datalist>
+                </fieldset>
+            </div>
+                    <br>
+                    <label style="font-size:18px">Optional</label><br>
+                    <label style="font-size:12px">After studying Computer Science and Technology, what do you want to become in the future?</label>
+                <div class="scroll-box">
+                    <input type="checkbox">Software Engineer/Developer<br>
+                    <input type="checkbox">Data Scientist<br>
+                    <input type="checkbox">Network Engineer<br>
+                    <input type="checkbox">Cybersecurity Specialist<br>
+                    <input type="checkbox">Machine Learning Engineer<br>
+                    <input type="checkbox">Web Developer<br>
+                    <input type="checkbox">Database Administrator<br>
+                    <input type="checkbox">Game Developer<br>
+                    <input type="checkbox">Artificial Intelligence (AI) Specialist<br>
+                    <input type="checkbox">Information Technology (IT) Manager<br>
+                    <input type="checkbox">Cloud Engineer<br>
+                    <input type="checkbox">Internet of Things (IoT) Developer<br>
+                    <input type="checkbox">Robotics Engineer<br>
+                    <input type="checkbox">User Experience (UX) Designer<br>
+                    <input type="checkbox">Augmented Reality (AR) and Virtual Reality (VR) Developer<br>
+                    <input type="checkbox">Mobile App Developer<br>
+                    <input type="checkbox">Ethical Hacker/Penetration Tester<br>
+                    <input type="checkbox">Technical Writer<br>
+                    <input type="checkbox">Blockchain Developer<br>
+                    <input type="checkbox">Search Engine Optimization (SEO) Specialist<br>
+                    <input type="checkbox">Systems Analyst<br>
+                    <input type="checkbox">Graphic Designer<br>
+                    <input type="checkbox">Programmer<br>
+                    <input type="checkbox">Game Designer<br>
+                    <input type="checkbox">Mobile Device Management (MDM) Specialist<br>
+                    <input type="checkbox">IT Consultant<br>
+                    <input type="checkbox">Business Intelligence (BI) Analyst<br>
+                    <input type="checkbox">DevOps Engineer<br>
+                    <input type="checkbox">Quality Assurance (QA) Tester<br>
+                    <input type="checkbox">Digital Marketing Specialist<br>
+                    <input type="checkbox">E-commerce Specialist<br>
+                    <input type="checkbox">IT Project Manager<br>
+                    <input type="checkbox">Technical Support Specialist<br>
+                    <input type="checkbox">Research Scientist in Computing<br>
+                    <input type="checkbox">Augmented Intelligence Specialist<br>
+                    <input type="checkbox">Data Analyst<br>
+                    <input type="checkbox">Information Systems Manager<br>
+                    <input type="checkbox">An Entrepreneur<br>
+                    <input type="checkbox">Consultant<br>
+            </div><br>
+            <div class="form-group">
+                <button style="display:block;margin:0 auto;"type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
+
